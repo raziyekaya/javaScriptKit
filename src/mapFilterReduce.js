@@ -1,3 +1,62 @@
+let cart= [
+    {id:1, productName:"Telefon", quantity:1, unitPrice:4000},
+    {id:2, productName:"Mause", quantity:3, unitPrice:100},
+    {id:3, productName:"Mause Pad", quantity:3, unitPrice:20},
+    {id:4, productName:"Tv Kumandası", quantity:2, unitPrice:400}
+]
+console.log("<ul>")
+cart.map(product=>{
+    console.log("<li>"+product.productName+" : "
+    +product.unitPrice*product.quantity+"</li>")
+})
+console.log("</ul>")
+
+let quantityOver2=cart.filter(product=>product.quantity>2)
+console.log(quantityOver2)
+
+let total= cart.reduce((acc,product)=>acc+product.unitPrice*product.quantity,0)
+
+console.log(total)
+
+
+
+function refTest(sepet) {
+    cart.push({id:5,productName:"USB Bellek",quantity:8, unitPrice:100})
+}
+
+refTest(cart)
+console.log(cart)
+
+let sayi=10
+
+function sayiTopla(number) {
+    number +=1
+}
+sayiTopla(sayi)
+console.log(sayi)
+console.log()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+console.log(" ")
+console.log("*************************")
 let cart = [
     {id:1, productName:"Telefon", quantity:3, unitPrice:4000},
     {id:2, productName:"Bardak", quantity:2, unitPrice:30},
@@ -42,4 +101,4 @@ function sayiTopla(number) {
 sayiTopla(sayi)
 console.log(sayi)
 
-//23.00 Dersteyiz
+//23.00 Dersteyiz*/
